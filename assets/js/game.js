@@ -8,12 +8,14 @@ console.log(playerName);
 console.log(playerHealth, playerAttack, playerMoney);
 console.log("You can put regular sentences in these.");
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
+
+
 // fight function
-var fight = function() {
+var fight = function(enemyName) {
   // Alert players that they are starting the round
   window.alert("Welcome to Robot Gladiators!");
 
@@ -69,4 +71,6 @@ var fight = function() {
 };
 
 // run fight function to start game
-fight();
+for(var i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
